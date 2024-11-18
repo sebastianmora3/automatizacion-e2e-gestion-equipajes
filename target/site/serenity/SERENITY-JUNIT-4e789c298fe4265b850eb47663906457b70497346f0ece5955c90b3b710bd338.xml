@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Gestión de Equipaje" skipped="0" tests="1" time="0.15" timestamp="2024-11-17 02:19:10"><testcase name="Acceso exitoso a la página de gestión de equipaje"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+com.google.common.base.Preconditions.checkNotNull(Preconditions.java:903)&#13;
+co.com.fabricaescuela.calidad.modulogestionequipaje.stepdefinitions.FindTitlePageStepDefinition.elUsuarioAccedeALaPaginaDeGestionDeEquipaje(FindTitlePageStepDefinition.java:27)&#13;
+✽.el usuario accede a la pagina de gestion de equipaje 1(file:///C:/Users/Sebastian/Desktop/Automatizacion%20Frontend/src/test/resources/features/luggage_management.feature:10)&#13;
+</system-err></testcase></testsuite>

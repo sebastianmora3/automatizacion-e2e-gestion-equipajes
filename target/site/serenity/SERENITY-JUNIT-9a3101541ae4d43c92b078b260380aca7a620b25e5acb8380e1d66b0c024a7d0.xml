@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Verificación de opciones de equipaje" skipped="0" tests="1" time="0.15" timestamp="2024-11-17 02:28:31"><testcase name="Verificar categorias principales de equipaje"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+com.google.common.base.Preconditions.checkNotNull(Preconditions.java:903)&#13;
+co.com.fabricaescuela.calidad.modulogestionequipaje.stepdefinitions.ShowLuggageStepDefinition.elUsuarioAccedeALaPaginaDeGestionDeEquipaje(ShowLuggageStepDefinition.java:113)&#13;
+✽.que el usuario ingresa a la pagina de equipaje(file:///C:/Users/Sebastian/Desktop/Automatizacion%20Frontend/src/test/resources/features/show_luggage.feature:7)&#13;
+</system-err></testcase></testsuite>

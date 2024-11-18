@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Verificación de opciones de equipaje" skipped="0" tests="2" time="1.45" timestamp="2024-11-18 01:15:48"><testcase name="Verificar categorias principales de equipaje"/><testcase name="Verificar opciones de equipaje especial y sus costos"/></testsuite>

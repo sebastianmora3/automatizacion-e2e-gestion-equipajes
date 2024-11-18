@@ -20,7 +20,7 @@ public class FindTitlePageStepDefinition {
         OnStage.theActorCalled("usuario");
     }
 
-    @When("el usuario espera que la pagina cargue completamente")
+    @When("espero que la pagina cargue completamente")
     public void elUsuarioEsperaQueLaPaginaCargueCompletamente() {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(EquipajePage.TITULO_PAGINA, isVisible())
@@ -28,7 +28,7 @@ public class FindTitlePageStepDefinition {
         );
     }
 
-    @Then("debe ver la pagina de gestion de equipaje")
+    @Then("debo ver la pagina de gestion de equipaje")
     public void debeVerLaPaginaDeGestionDeEquipaje() {
         OnStage.theActorInTheSpotlight().should(
                 seeThat("el título está presente",

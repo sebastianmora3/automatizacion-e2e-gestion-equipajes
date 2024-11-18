@@ -22,7 +22,7 @@ public class HoldLuggageStepDefinition {
         OnStage.theActorCalled("usuario");
     }
 
-    @When("el usuario visualiza la seccion {string}")
+    @When("visualizo la seccion {string}")
     public void elUsuarioVisualizaLaSeccion(String seccionTitulo) {
         OnStage.theActorInTheSpotlight().attemptsTo(ViewHoldLuggage.section());
         OnStage.theActorInTheSpotlight().should(
@@ -30,7 +30,7 @@ public class HoldLuggageStepDefinition {
         );
     }
 
-    @Then("debe ver la opcion de maleta de {string} con precio {string}")
+    @Then("debo ver la opcion de maleta de {string} con precio {string}")
     public void debeVerLaOpcionDeMaletaConPrecio(String peso, String precio) {
         if (peso.equals("15kg")) {
             OnStage.theActorInTheSpotlight().should(
@@ -45,7 +45,7 @@ public class HoldLuggageStepDefinition {
         }
     }
 
-    @Then("debe ver un indicador {string} para cada opcion de bodega")
+    @Then("debo ver un indicador {string} para cada opcion de bodega")
     public void debeVerUnIndicadorParaCadaOpcionDeBodega(String indicador) {
         OnStage.theActorInTheSpotlight().should(
                 seeThat(BaggageCellar.text(MAX_INDICATOR_15KG), equalTo(indicador)),
@@ -53,7 +53,7 @@ public class HoldLuggageStepDefinition {
         );
     }
 
-    @Then("debe ver controles de cantidad para seleccionar el numero de maletas")
+    @Then("debo ver controles de cantidad para seleccionar el numero de maletas")
     public void debeVerControlesDeCantidadParaSeleccionarElNumeroDeMaletas() {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(DECREASE_BUTTON_15KG, isVisible()).forNoMoreThan(10).seconds(),

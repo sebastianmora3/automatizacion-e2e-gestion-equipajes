@@ -1,5 +1,6 @@
 package co.com.fabricaescuela.calidad.modulogestionequipaje.stepdefinitions;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.actors.OnStage;
@@ -9,20 +10,27 @@ import co.com.fabricaescuela.calidad.modulogestionequipaje.tasks.SelectLuggageCa
 import co.com.fabricaescuela.calidad.modulogestionequipaje.tasks.RemoveAllLuggage;
 import co.com.fabricaescuela.calidad.modulogestionequipaje.questions.TotalCost;
 import co.com.fabricaescuela.calidad.modulogestionequipaje.questions.CostFormat;
+import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class CostCalculationStepDefinition {
 
-    @When("el usuario selecciona una categoria de equipaje")
+    @Before
+    public void config(){
+        OnStage.setTheStage(new OnlineCast());
+        OnStage.theActorCalled("usuario");
+    }
+
+    @When("selecciono una categoria de equipaje")
     public void elUsuarioSeleccionaUnaCategoriaDeLuggage() {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 SelectLuggageCategory.andIncrease()
         );
     }
 
-    @Then("debe ver el costo actualizado inmediatamente")
+    @Then("debo ver el costo actualizado inmediatamente")
     public void debeVerElCostoActualizadoInmediatamente() {
         OnStage.theActorInTheSpotlight().should(
-                seeThat(TotalCost.value(), equalTo("COP 249.500,00"))
+                seeThat(TotalCost.value(), equalTo("COP 249,500.00"))
         );
     }
 
@@ -59,7 +67,7 @@ public class CostCalculationStepDefinition {
     }
 
 
-    @When("el usuario elimina todo el equipaje")
+    @When("elimino todo el equipaje")
     public void elUsuarioEliminaTodoElEquipaje() {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 RemoveAllLuggage.completely()

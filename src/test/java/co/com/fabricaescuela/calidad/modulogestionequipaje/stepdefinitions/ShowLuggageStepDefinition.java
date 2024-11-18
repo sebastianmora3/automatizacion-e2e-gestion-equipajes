@@ -27,24 +27,24 @@ public class ShowLuggageStepDefinition {
         OnStage.theActorCalled("usuario");
     }
 
-    @When("el usuario visualiza las opciones disponibles")
+    @When("visualizo las opciones disponibles")
     public void elUsuarioVisualizaLasOpcionesDisponibles() {
 
         OnStage.theActorInTheSpotlight().attemptsTo(ViewThe.luggageOptions());
     }
 
-    @Then("debe ver las categorias {string}, {string} y {string}")
+    @Then("debo ver las categorias {string}, {string} y {string}")
     public void debeVerLasCategorias(String categoria1, String categoria2, String categoria3) {
         OnStage.theActorInTheSpotlight()
                 .should(seeThat(TheLuggageCategories.areVisible(), is(true)));
     }
 
-    @When("el usuario hace clic en la opcion {string}")
+    @When("hago clic en la opcion {string}")
     public void elUsuarioHaceClicEnLaOpcion(String opcion) {
         OnStage.theActorInTheSpotlight().attemptsTo(ClickOn.specialLuggage());
     }
 
-    @Then("debe ver las siguientes opciones de equipaje especial con sus costos:")
+    @Then("debo ver las siguientes opciones de equipaje especial con sus costos:")
     public void debeVerLasOpcionesDeEquipajeEspecialConSusCostos(DataTable dataTable) {
         List<Map<String, String>> data = dataTable.asMaps();
 

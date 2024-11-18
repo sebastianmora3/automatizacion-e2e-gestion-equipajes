@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Verificacion de opciones de equipaje en cabina y bodega" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-11-18T06:15:40" hostname="DESKTOP-OGQ68JO" time="4.076">
+<testsuite name="Verificacion de opciones de equipaje en cabina y bodega" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-11-18T12:43:14" hostname="DESKTOP-OGQ68JO" time="4.033">
   <properties/>
-  <testcase name="Verificar opciones de equipaje en cabina" classname="Verificacion de opciones de equipaje en cabina y bodega" time="2.491"/>
-  <testcase name="Verificar opciones de equipaje en bodega" classname="Verificacion de opciones de equipaje en cabina y bodega" time="0.839"/>
-  <testcase name="Verificar límites de selección de equipaje de bodega" classname="Verificacion de opciones de equipaje en cabina y bodega" time="0.746"/>
+  <testcase name="Verificar opciones de equipaje en cabina" classname="Verificacion de opciones de equipaje en cabina y bodega" time="2.483"/>
+  <testcase name="Verificar opciones de equipaje en bodega" classname="Verificacion de opciones de equipaje en cabina y bodega" time="0.819"/>
+  <testcase name="Verificar límites de selección de equipaje de bodega" classname="Verificacion de opciones de equipaje en cabina y bodega" time="0.731"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO  - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
@@ -15,9 +15,9 @@ Verificar opciones de equipaje en cabina(verificacion-de-opciones-de-equipaje-en
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \n                   --disa..., --disable-default-apps, --disable-extensions-file-a..., \n                   --inco..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-nov. 18, 2024 1:15:42 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+nov. 18, 2024 7:43:15 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 130
-nov. 18, 2024 1:15:42 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+nov. 18, 2024 7:43:15 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 130.0.6723.117. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  

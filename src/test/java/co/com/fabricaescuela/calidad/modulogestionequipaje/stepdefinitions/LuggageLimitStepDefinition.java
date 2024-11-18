@@ -22,7 +22,7 @@ public class LuggageLimitStepDefinition {
         OnStage.theActorCalled("usuario");
     }
 
-    @When("el usuario intenta agregar mas de {string} maletas de cualquier tipo")
+    @When("intento agregar mas de {string} maletas de cualquier tipo")
     public void elUsuarioIntentaAgregarMasDeMaletas(String limite) {
         int clicks = Integer.parseInt(limite) + 1; // Intentamos agregar uno más del límite
         OnStage.theActorInTheSpotlight().attemptsTo(
@@ -30,7 +30,7 @@ public class LuggageLimitStepDefinition {
         );
     }
 
-    @Then("el sistema no debe permitir exceder este limite")
+    @Then("no se me debe permitir exceder este limite")
     public void elSistemaNoDebePermitirExcederEsteLimite() {
         OnStage.theActorInTheSpotlight().should(
                 seeThat(TheLuggageQuantity.amount(LUGGAGE_QUANTITY_15KG), equalTo("3"))

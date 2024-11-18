@@ -22,12 +22,12 @@ public class CabinLuggageStepDefinition {
         OnStage.theActorCalled("usuario");
     }
 
-    @When("el usuario visualiza las opciones de equipaje en cabina")
+    @When("visualizo las opciones de equipaje en cabina")
     public void elUsuarioVisualizaLasOpcionesDeEquipajeEnCabina() {
         OnStage.theActorInTheSpotlight().attemptsTo(ViewCabinLuggage.options());
     }
 
-    @Then("debe ver la opcion {string} con descripcion {string}")
+    @Then("debo ver la opcion {string} con descripcion {string}")
     public void debeVerLaOpcionConDescripcion(String opcion, String descripcion) {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(SINGLE_BAG_TITLE, isVisible()).forNoMoreThan(20).seconds()
@@ -39,14 +39,14 @@ public class CabinLuggageStepDefinition {
         );
     }
 
-    @Then("debe ver que esta opcion esta {string}")
+    @Then("debo ver que esta opcion esta {string}")
     public void debeVerQueEstaOpcionEsta(String estado) {
         OnStage.theActorInTheSpotlight().should(
                 seeThat(CabinLuggageOption.text(INCLUDED_TEXT), containsString(estado))
         );
     }
 
-    @Then("debe ver la opcion {string} {string}")
+    @Then("debo ver la opcion {string} {string}")
     public void debeVerLaOpcion(String opcionCombinada, String descripcion) {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(SINGLE_BAG_TITLE, isVisible()).forNoMoreThan(10).seconds()
@@ -58,7 +58,7 @@ public class CabinLuggageStepDefinition {
         );
     }
 
-    @Then("debe ver el precio {string} para la opcion adicional de cabina")
+    @Then("debo ver el precio {string} para la opcion adicional de cabina")
     public void debeVerElPrecioParaLaOpcionAdicionalDeCabina(String precio) {
         OnStage.theActorInTheSpotlight().should(
                 seeThat(CabinLuggageOption.text(PRICE_TEXT), containsString(precio))

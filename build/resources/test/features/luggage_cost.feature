@@ -4,10 +4,10 @@ Feature: Gestión de equipaje y visualización de costos
   Para planificar mi viaje adecuadamente
 
   Scenario: Verificar cálculo y visualización de costos
-    Given que el usuario ingresa a la pagina de equipaje
-    When el usuario selecciona una categoria de equipaje
-    Then debe ver el costo actualizado inmediatamente
+    Given que ingreso a la pagina de equipaje
+    When selecciono una categoria de equipaje
+    Then debo ver el costo actualizado inmediatamente
     And los montos deben mostrarse con decimales separados por coma
     And los miles deben estar separados por punto
-    When el usuario elimina todo el equipaje
+    When elimino todo el equipaje
     Then el valor total debe mostrarse como cero
